@@ -85,15 +85,15 @@ class WebSocketTransport extends Transport
 	{
 		if (_socket != null)
 		{
-			trace("WebSocket transport closed: [" + event.code + "] " + event.reason);
+			//trace("WebSocket transport closed: [" + event.code + "] " + event.reason);
 			dispatchEvent(new TransportEvent(TransportEvent.CLOSED));
 		}
 	}
 	
 	private function onError(event : Dynamic) : Void
 	{
-		if (_socket != null)
-			trace("WebSocket transport error: " + event.message);
+		//if (_socket != null)
+			//trace("WebSocket transport error: " + event.message);
 	}
 	
 	private var _url : String;

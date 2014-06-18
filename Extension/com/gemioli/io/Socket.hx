@@ -197,6 +197,7 @@ class Socket extends EventDispatcher
 	 */
 	public function once(event : String, callbackFunction : Dynamic->Void) : Void
 	{
+		if (onceMap.exists(event)) removeEventListener(event, onceCallback);
 		onceMap.set(event, callbackFunction);
 		addEventListener(event, onceCallback);
 	}
